@@ -1,0 +1,33 @@
+Author: Ryan Houlihan
+Description: Simple and naive spell checking application
+
+COMPLIE:
+	gcc dictonaryBin.c getFile.c spellchecker.c -o spellChecker
+USAGE:
+	spellChecker [fileName.txt] [dictonaryName.txt]
+
+To use spellChecker please be sure to list the filename to be checked in the argument. 
+If you would like to use your own dictonary please be sure to list the file address for it as a second argument. 
+If no dictonary file is specified then the standard dictonary file will be used. 
+
+ryan@ryan-desktop:~/Documents/Programs/C_Programming/2107/Lab_6$ ./spellChecker random.txt
+           this				OK
+             is				OK
+             to				OK
+           test				OK
+             te				INCORRECT! Suggestion: tea
+        program				OK
+            man				OK
+        sleepyp				INCORRECT! Suggestion: sleet
+         housed				OK
+          homef				INCORRECT! Suggestion: homegrown
+       unicornp				INCORRECT! Suggestion: unicorns
+        asdfasd				INCORRECT! Suggestion: asgard
+           hjsd				INCORRECT! Suggestion: ho
+              e				OK
+           klks				INCORRECT! Suggestion: klutz
+             sa				INCORRECT! Suggestion: sabbatical
+           sldk				INCORRECT! Suggestion: sleaze
+            sdk				INCORRECT! Suggestion: sea
+ryan@ryan-desktop:~/Documents/Programs/C_Programming/2107/Lab_6$ more random.txt
+This is to test te program man. sleepyp housed homef unicornp ASDFASD hjsd e klks sa  sldk sdk
